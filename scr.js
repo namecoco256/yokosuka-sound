@@ -1,4 +1,4 @@
-const count = document.getElementById("count");
+const count = document.getElementById("count").textContent;
 //↑何回横須賀に入ったか
 const button = document.getElementById("button");
 //↑ボタン
@@ -57,8 +57,10 @@ function geoFindMe() {
 button.onmousedown = function() {
   if (status) {
   clearInterval(autorefresh);
+  status = false;
   }else {
   var autorefresh = setInterval(geoFindMe(), 5000)
+  status = true
   }  
 }
 
