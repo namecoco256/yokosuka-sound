@@ -31,7 +31,7 @@ function geoFindMe() {
       if (reica_data.getElementsByTagName('city').textContent == "横須賀市") {
         console.log("you are in yokosuka!");
         yn.textContent = "you are in yokosuka!";
-        count ++
+        document.getElementById("count").textContent ++
       } 
       else {
         console.log("you are not in yokosuka!")
@@ -58,12 +58,12 @@ button.onmousedown = function() {
   if (automode) {
     clearInterval(autorefresh);
     automode = false;
-    button.backgroundColor = "#FF0000";
+    document.getElementById("button").backgroundColor = "#FF0000";
     console.log("turned off");
   }else {
     var autorefresh = setInterval(geoFindMe(), 5000)
     automode = true
-    button.backgroundColor = "#00FF00";
+    document.getElementById("button").backgroundColor = "#00FF00";
     console.log("turned on");
     console.log(autorefresh);
   };
