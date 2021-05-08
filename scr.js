@@ -1,3 +1,10 @@
+const count = Document.getElementById(count)
+//↑何回横須賀に入ったか
+const button = Document.getElementById(button)
+//↑ボタン
+const yn = Document.getElementById(yn)
+//↑横須賀にいるかどうか
+
 function geoFindMe() {
 
   const status = document.querySelector('#status');
@@ -14,7 +21,7 @@ function geoFindMe() {
     mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
     mapLink.textContent = `Latitude: ${latitude} °, Longitude: ${longitude} °`;
     
-    //追加部分
+
     var reica_request = new XMLHttpRequest();
     var reica_mapapi = "https://nominatim.openstreetmap.org/search?q=" + latitude + ","+ longitude + "&format=json&polygon=1&addressdetails=1"
     reica_request.open('GET', reica_mapapi, true);
@@ -23,10 +30,15 @@ function geoFindMe() {
       console.log(reica_data);
       if (reica_data.city == "横須賀市") {
         console.log("you are in yokosuka!");
+        yn.textContent = "you are in yokosuka!";
+        count ++1
+      } 
+      else {
+        console.log("you are not in yokosuka!")
+        yn.textContent = "you are not in yokosuka!";
       }
     };
     reica_request.send();
-    //ここまで追加部分
   }
 
   function error() {
