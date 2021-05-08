@@ -56,15 +56,18 @@ function geoFindMe() {
 
 button.onmousedown = function() {
   if (status) {
-  clearInterval(autorefresh);
-  status = false;
-    button.background-color = "#FF0000"
+    clearInterval(autorefresh);
+    status = false;
+    button.background-color = "#FF0000";
+    console.log("turned off");
   }else {
-  var autorefresh = setInterval(geoFindMe(), 5000)
-  status = true
-    button.background-color = "#00FF00"
-  }  
-}
+    var autorefresh = setInterval(geoFindMe(), 5000)
+    status = true
+    button.background-color = "#00FF00";
+    console.log("turned on");
+    console.log(autorefresh);
+  };
+};
 
 
 //document.querySelector('#find-me').addEventListener('click', geoFindMe);
