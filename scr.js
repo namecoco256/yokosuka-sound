@@ -54,7 +54,7 @@ function geoFindMe() {
 
 }
 
-button.onmousedown = function {
+button.onmousedown = function() {
   if (status) {
   clearInterval(autorefresh);
   }else {
