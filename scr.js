@@ -28,7 +28,7 @@ function geoFindMe() {
     reica_request.onload = function () {
       var reica_data = this.response;
       console.log(reica_data);
-      if (reica_data.city == "横須賀市") {
+      if (reica_data.address.city == "横須賀市") {
         console.log("you are in yokosuka!");
         yn.textContent = "you are in yokosuka!";
         count ++
