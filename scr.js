@@ -58,9 +58,11 @@ button.onmousedown = function() {
   if (status) {
   clearInterval(autorefresh);
   status = false;
+    button.background-color = "#FF0000"
   }else {
   var autorefresh = setInterval(geoFindMe(), 5000)
   status = true
+    button.background-color = "#00FF00"
   }  
 }
 
