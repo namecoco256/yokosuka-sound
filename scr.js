@@ -31,7 +31,7 @@ function geoFindMe() {
       if (reica_data.city == "横須賀市") {
         console.log("you are in yokosuka!");
         yn.textContent = "you are in yokosuka!";
-        count ++1
+        count ++
       } 
       else {
         console.log("you are not in yokosuka!")
