@@ -58,12 +58,12 @@ button.onmousedown = function() {
   if (status) {
     clearInterval(autorefresh);
     status = false;
-    button.background-color = "#FF0000";
+    button.backgroundColor = "#FF0000";
     console.log("turned off");
   }else {
     var autorefresh = setInterval(geoFindMe(), 5000)
     status = true
-    button.background-color = "#00FF00";
+    button.backgroundColor = "#00FF00";
     console.log("turned on");
     console.log(autorefresh);
   };
