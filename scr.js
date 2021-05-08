@@ -4,7 +4,7 @@ const button = document.getElementById("button");
 //↑ボタン
 const yn = document.getElementById("yn");
 //↑横須賀にいるかどうか
-var status = false;
+var automode = false;
 function geoFindMe() {
 
   const status = document.querySelector('#status');
@@ -55,14 +55,14 @@ function geoFindMe() {
 }
 
 button.onmousedown = function() {
-  if (status) {
+  if (automode) {
     clearInterval(autorefresh);
-    status = false;
+    automode = false;
     button.backgroundColor = "#FF0000";
     console.log("turned off");
   }else {
     var autorefresh = setInterval(geoFindMe(), 5000)
-    status = true
+    automode = true
     button.backgroundColor = "#00FF00";
     console.log("turned on");
     console.log(autorefresh);
