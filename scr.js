@@ -4,7 +4,7 @@ const button = Document.getElementById(button)
 //↑ボタン
 const yn = Document.getElementById(yn)
 //↑横須賀にいるかどうか
-
+var status = false;
 function geoFindMe() {
 
   const status = document.querySelector('#status');
@@ -54,4 +54,15 @@ function geoFindMe() {
 
 }
 
-document.querySelector('#find-me').addEventListener('click', geoFindMe);
+button.onmousedown = function {
+  if (status) {
+  clearInterval(autorefresh);
+  }else {
+  var autorefresh = setInterval(geoFindMe(), 5000)
+  }  
+}
+
+
+//document.querySelector('#find-me').addEventListener('click', geoFindMe);
+
+
