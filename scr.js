@@ -23,7 +23,7 @@ function geoFindMe() {
     
 
     var reica_request = new XMLHttpRequest();
-    var reica_mapapi = "https://nominatim.openstreetmap.org/search?q=" + latitude + ","+ longitude + "&format=json&polygon=1&addressdetails=1"
+    var reica_mapapi = "https://nominatim.openstreetmap.org/search?q=" + latitude + ","+ longitude + "&format=xml&polygon=1&addressdetails=1"
     reica_request.open('GET', reica_mapapi, true);
     reica_request.onload = function () {
       var reica_data = this.response;
