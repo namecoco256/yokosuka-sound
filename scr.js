@@ -1,8 +1,8 @@
-const count = Document.getElementById(count)
+const count = document.getElementById("count");
 //↑何回横須賀に入ったか
-const button = Document.getElementById(button)
+const button = document.getElementById("button");
 //↑ボタン
-const yn = Document.getElementById(yn)
+const yn = document.getElementById("yn");
 //↑横須賀にいるかどうか
 var status = false;
 function geoFindMe() {
