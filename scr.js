@@ -21,7 +21,7 @@ function geoFindMe() {
     mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
     mapLink.textContent = `Latitude: ${latitude} °, Longitude: ${longitude} °`;*/
     
-
+    //issue#5
     var reica_request = new XMLHttpRequest();
     var reica_mapapi = "https://nominatim.openstreetmap.org/search?q=" + latitude + ","+ longitude + "&format=xml&polygon=1&addressdetails=1"
     reica_request.open('GET', reica_mapapi, true);
@@ -40,7 +40,7 @@ function geoFindMe() {
     };
     reica_request.send();
   }
-
+    //issue#5
   function error() {
     //status.textContent = 'Unable to retrieve your location';
   }
