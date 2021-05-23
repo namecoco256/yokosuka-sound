@@ -30,22 +30,23 @@ function geoFindMe() {
     reica_request.onload = function () {
       var reica_data = this.response;
       console.log(reica_data);
-      if (reica_data.city.textContent == "横須賀市") {
+      console.log(reica_data.lastIndexOf("横須賀市"));
+      if (reica_data.lastIndexOf("横須賀市") == -1) {
+        console.log("you are not in yokosuka!")
+        yn.textContent = "you are not in yokosuka!";
+          reica_continuing = false;
+      }
+      else {
         console.log("you are in yokosuka!");
         yn.textContent = "you are in yokosuka!";
         if (!reica_continuing) {
           document.getElementById("count").textContent ++
           reica_continuing = true;
         };
-      }
-      else {
-        console.log("you are not in yokosuka!")
-        yn.textContent = "you are not in yokosuka!";
-          reica_continuing = false;
       };
     };
     reica_request.send();
-  }
+  };
     //issue#5
   function error() {
     //status.textContent = 'Unable to retrieve your location';
