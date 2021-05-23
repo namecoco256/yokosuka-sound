@@ -5,6 +5,8 @@ const button = document.getElementById("button");
 const yn = document.getElementById("yn");
 //↑横須賀にいるかどうか
 var automode = false;
+
+var reica_continuing = false;
 function geoFindMe() {
 
   /*const status = document.querySelector('#status');
@@ -31,12 +33,16 @@ function geoFindMe() {
       if (reica_data.city.textContent == "横須賀市") {
         console.log("you are in yokosuka!");
         yn.textContent = "you are in yokosuka!";
-        document.getElementById("count").textContent ++
-      } 
+        if (!reica_continuing) {
+          document.getElementById("count").textContent ++
+          reica_continuing = true;
+        };
+      }
       else {
         console.log("you are not in yokosuka!")
         yn.textContent = "you are not in yokosuka!";
-      }
+          reica_continuing = false;
+      };
     };
     reica_request.send();
   }
