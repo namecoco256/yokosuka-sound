@@ -5,6 +5,7 @@ const button = document.getElementById("button");
 const yn = document.getElementById("yn");
 //↑横須賀にいるかどうか
 var automode = false;
+var autorefresh;
 
 var reica_continuing = false;
 function geoFindMe() {
