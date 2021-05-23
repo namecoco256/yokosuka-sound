@@ -50,6 +50,7 @@ function geoFindMe() {
     //issue#5
   function error() {
     //status.textContent = 'Unable to retrieve your location';
+    console.log("Unable");
   }
 
   if(!navigator.geolocation) {
