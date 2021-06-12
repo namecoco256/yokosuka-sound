@@ -11,9 +11,13 @@
   				background-color: #b0c4de;
   
 			}
-			#main{
-				margin: 30% auto;
+			@media (max-width: 500px) {
+   				/* 横幅が320px以下の場合に適用するスタイル */
+   				#main{
+					margin: 30% auto;
+				}
 			}
+			
 			#count{
   				color: #ffffff;
   				font-size: 100px;
