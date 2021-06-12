@@ -4,6 +4,7 @@ const button = document.getElementById("button");
 //↑ボタン
 const yn = document.getElementById("yn");
 //↑横須賀にいるかどうか
+const yokosukaSE = new Audio(https://soundeffect-lab.info/sound/voice/mp3/people/people-studio-laugh-large2.mp3);
 var automode = false;
 var autorefresh;
 
@@ -39,6 +40,7 @@ function geoFindMe() {
       else {
         console.log("you are in yokosuka!");
         yn.textContent = "you are in yokosuka!";
+        yokosukaSE.play();
         if (!reica_continuing) {
           document.getElementById("count").textContent ++
           reica_continuing = true;
