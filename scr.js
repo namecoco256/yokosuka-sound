@@ -4,7 +4,7 @@ const button = document.getElementById("button");
 //↑ボタン
 const yn = document.getElementById("yn");
 //↑横須賀にいるかどうか
-const yokosukaSE = new Audio(https://soundeffect-lab.info/sound/voice/mp3/people/people-studio-laugh-large2.mp3);
+var yokosukaSE = new Audio(https://soundeffect-lab.info/sound/voice/mp3/people/people-studio-laugh-large2.mp3);
 var automode = false;
 var autorefresh;
 
