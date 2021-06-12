@@ -36,6 +36,8 @@ function geoFindMe() {
         console.log("you are not in yokosuka!")
         yn.textContent = "you are not in yokosuka!";
           reica_continuing = false;
+        //yniro
+        yn.style.backgroundColor = "#8b2d47";
       }
       else {
         console.log("you are in yokosuka!");
@@ -44,6 +46,8 @@ function geoFindMe() {
           document.getElementById("count").textContent ++
           reica_continuing = true;
           yokosukaSE.play();
+          //yniro
+          yn.style.backgroundColor = "#2D478B";
         };
       };
     };
