@@ -4,7 +4,11 @@ const button = document.getElementById("button");
 //↑ボタン
 const yn = document.getElementById("yn");
 //↑横須賀にいるかどうか
+var yokosukaSE = new Audio("https://soundeffect-lab.info/sound/voice/mp3/people/people-studio-laugh-large2.mp3");
 var automode = false;
+var autorefresh;
+
+var reica_continuing = false;
 function geoFindMe() {
 
   /*const status = document.querySelector('#status');
@@ -21,28 +25,37 @@ function geoFindMe() {
     mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
     mapLink.textContent = `Latitude: ${latitude} °, Longitude: ${longitude} °`;*/
     
-
     var reica_request = new XMLHttpRequest();
-    var reica_mapapi = "https://nominatim.openstreetmap.org/search?q=" + latitude + ","+ longitude + "&format=xml&polygon=1&addressdetails=1"
+    var reica_mapapi = "https://nominatim.openstreetmap.org/search?q=" + latitude + ","+ longitude + "&format=json&polygon=1&addressdetails=1"
     reica_request.open('GET', reica_mapapi, true);
     reica_request.onload = function () {
       var reica_data = this.response;
       console.log(reica_data);
-      if (reica_data.city == "横須賀市") {
-        console.log("you are in yokosuka!");
-        yn.textContent = "you are in yokosuka!";
-        document.getElementById("count").textContent ++
-      } 
-      else {
+      console.log(reica_data.lastIndexOf("横須賀市"));
+      if (reica_data.lastIndexOf("横須賀市") == -1) {
         console.log("you are not in yokosuka!")
         yn.textContent = "you are not in yokosuka!";
+          reica_continuing = false;
+        //yniro
+        yn.style.backgroundColor = "#8b2d47";
       }
+      else {
+        console.log("you are in yokosuka!");
+        yn.textContent = "you are in yokosuka!";
+        if (!reica_continuing) {
+          document.getElementById("count").textContent ++
+          reica_continuing = true;
+          yokosukaSE.play();
+          //yniro
+          yn.style.backgroundColor = "#2D478B";
+        };
+      };
     };
     reica_request.send();
-  }
-
+  };
   function error() {
     //status.textContent = 'Unable to retrieve your location';
+    console.log("Unable");
   }
 
   if(!navigator.geolocation) {
@@ -58,12 +71,15 @@ button.onmousedown = function() {
   if (automode) {
     clearInterval(autorefresh);
     automode = false;
-    document.getElementById("button").backgroundColor = "#FF0000";
+    document.getElementById("button").style.backgroundColor = "#FF0000";
+    document.getElementById("button").textContent = "OFF";
     console.log("turned off");
   }else {
-    var autorefresh = setInterval(geoFindMe(), 5000)
+    geoFindMe()
+    autorefresh = setInterval(geoFindMe, 10000)
     automode = true
-    document.getElementById("button").backgroundColor = "#00FF00";
+    document.getElementById("button").style.backgroundColor = "#00FF00";
+    document.getElementById("button").textContent = "ON";
     console.log("turned on");
     console.log(autorefresh);
   };
