@@ -4,7 +4,7 @@ const button = document.getElementById("button");
 //↑ボタン
 const yn = document.getElementById("yn");
 //↑横須賀にいるかどうか
-var yokosukaSE = new Audio("sounds/stupid5.mp3");
+var yokosukaSE = new Audio("sounds/stupid5.wav");
 var automode = false;
 var autorefresh;
 
