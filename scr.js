@@ -45,7 +45,9 @@ function geoFindMe() {
         if (!reica_continuing) {
           document.getElementById("count").textContent ++
           reica_continuing = true;
+          yokosukaSE.muted = true;
           yokosukaSE.play();
+          stop();
           //yniro
           yn.style.backgroundColor = "#2D478B";
         };
@@ -54,12 +56,12 @@ function geoFindMe() {
     reica_request.send();
   };
   function error() {
-    //status.textContent = 'Unable to retrieve your location';
+    yn.textContent = 'Unable to retrieve your location';
     console.log("Unable");
   }
 
   if(!navigator.geolocation) {
-    //status.textContent = 'Geolocation is not supported by your browser';
+    yn.textContent = 'Geolocation is not supported by your browser';
   } else {
     status.textContent = 'Locating…';
     navigator.geolocation.getCurrentPosition(success, error);
