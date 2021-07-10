@@ -44,6 +44,7 @@ function geoFindMe() {
         if (!reica_continuing) {
           document.getElementById("count").textContent ++
           reica_continuing = true;
+					currentTime = 0;
           yokosukaSE.muted = false;
           yokosukaSE.play();
           stop();
