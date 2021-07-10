@@ -82,7 +82,7 @@ button.onmousedown = function() {
     document.getElementById("button").textContent = "OFF";
     console.log("turned off");
   }else {
-    geoFindMe()
+    //geoFindMe()
     autorefresh = setInterval(geoFindMe, 10000)
     automode = true
     document.getElementById("button").style.backgroundColor = "#00FF00";
