@@ -68,9 +68,12 @@ function geoFindMe() {
 }
 
 button.onmousedown = function() {
+  
   yokosukaSE.muted = true;
   yokosukaSE.play();
   stop();
+  currentTime = 0;
+  
   if (automode) {
     clearInterval(autorefresh);
     automode = false;
