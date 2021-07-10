@@ -40,7 +40,7 @@ function geoFindMe() {
       }
       else {
         console.log("you are in yokosuka!");
-        yn.textContent = "you are in<br>yokosuka!";
+        yn.textContent = "you are in yokosuka!";
         if (!reica_continuing) {
           document.getElementById("count").textContent ++
           reica_continuing = true;
