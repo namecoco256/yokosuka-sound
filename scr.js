@@ -44,7 +44,7 @@ function geoFindMe() {
         if (!reica_continuing) {
           document.getElementById("count").textContent ++
           reica_continuing = true;
-          yokosukaSE.muted = true;
+          yokosukaSE.muted = false;
           yokosukaSE.play();
           stop();
           yn.style.backgroundColor = "#2D478B";
