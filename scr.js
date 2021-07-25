@@ -4,7 +4,7 @@ const button = document.getElementById("button");
 //↑ボタン
 const yn = document.getElementById("yn");
 //↑横須賀にいるかどうか
-var yokosukaSE = new Audio("sounds/stupid5.mp3");
+var yokosukaSE = new Audio("sounds/yokosuka.mp3");
 var automode = false;
 var autorefresh;
 
@@ -82,7 +82,7 @@ button.onmousedown = function() {
     document.getElementById("button").textContent = "OFF";
     console.log("turned off");
   }else {
-    geoFindMe()
+    //geoFindMe()
     autorefresh = setInterval(geoFindMe, 10000)
     automode = true
     document.getElementById("button").style.backgroundColor = "#00FF00";
