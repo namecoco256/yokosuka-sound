@@ -1,4 +1,4 @@
-const count = document.getElementById("count").textContent;
+document.getElementById("count").textContent = localStorage.getItem("countsave");
 //↑何回横須賀に入ったか
 const button = document.getElementById("button");
 //↑ボタン
@@ -8,7 +8,7 @@ var yokosukaSE = new Audio("sounds/yokosuka.mp3");
 var automode = false;
 var autorefresh;
 
-var reica_continuing = false;
+var reica_continuing = localStorage.getItem('buttonsave');
 function geoFindMe() {
 
   /*const status = document.querySelector('#status');
@@ -36,6 +36,7 @@ function geoFindMe() {
         console.log("you are not in yokosuka!")
         yn.textContent = "you are not in yokosuka!";
           reica_continuing = false;
+          localStorage.setItem('buttonsave', false);
         yn.style.backgroundColor = "#8b2d47";
       }
       else {
@@ -43,7 +44,9 @@ function geoFindMe() {
         yn.textContent = "you are in yokosuka!";
         if (!reica_continuing) {
           document.getElementById("count").textContent ++
+          localStorage.setItem('countsave', document.getElementById("count").textContent);
           reica_continuing = true;
+          localStorage.setItem('buttonsave', true);
 					currentTime = 0;
           yokosukaSE.muted = false;
           yokosukaSE.play();
