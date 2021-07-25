@@ -42,7 +42,8 @@ function geoFindMe() {
         console.log("you are in yokosuka!");
         yn.textContent = "you are in yokosuka!";
         if (!reica_continuing) {
-          document.getElementById("count").textContent ++
+          //document.getElementById("count").textContent ++
+					count ++
           reica_continuing = true;
 					currentTime = 0;
           yokosukaSE.muted = false;
