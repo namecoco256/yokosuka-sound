@@ -86,6 +86,18 @@
 				bottom: 0;
 				background-color: #ffffff;
 			}
+			.hidden_box input:checked ~ .hidden_show {
+    				0% {
+    				opacity: 0;
+    				transform: scaleY(0) translateX(-5%);
+  					}
+  				100% {
+    				transform: scaleY(1) translateX(0);
+  				}
+  				100% {
+    					opacity: 1;
+  				}
+			}
 		</style>
 		<div id="main">
 		<div id="count">0</div> 
@@ -93,7 +105,8 @@
 		<div id="yn"></div>
 		<div id="menu">
 			<div class="border"></div>
-			<div id="color" class="insidemenu">色</div>
+			<label for="label-sound"><div id="color" class="insidemenu">色</div></label>
+			<input type="checkbox" id="label-sound"/>
 			<div class="border"></div>
 			<div id="sound" class="insidemenu">音</div>
 			<div class="border"></div>
