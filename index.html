@@ -86,17 +86,19 @@
 				bottom: 0;
 				background-color: #ffffff;
 			}
-			.hidden_box input:checked ~ .hidden_show {
+			@keyframes slide-in{
     				0% {
-    				opacity: 0;
-    				transform: scaleY(0) translateX(-5%);
-  					}
-  				100% {
-    				transform: scaleY(1) translateX(0);
+    				transform: scaleY(0);
   				}
   				100% {
-    					opacity: 1;
+    				transform: scaleY(1);
   				}
+			}
+			#label-sound input:checked ~ #colormenu{
+				display: inline;
+				animation-name: slide-in;
+				animation-duration: 1s;
+				animation-fill-mode: forwards;
 			}
 		</style>
 		<div id="main">
