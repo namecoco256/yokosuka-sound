@@ -57,7 +57,7 @@
 				grid-template-columns: 1fr 1fr;
 				align-items: center;
 				height: 100px;
-				flex-basis: 100px;
+				justify-content: center;
 			}
 			#colormenu{
 				display: none;
@@ -69,14 +69,17 @@
 				bottom: 0;
 				background-color: #ffffff;
 			}
+			.insidemenu{
+				width:100px;
+			}
 		</style>
 		<div id="main">
 		<div id="count">0</div> 
 		<div id="button">OFF</div> 
 		<div id="yn"></div>
 		<div id="menu">
-			<div id="color">色</div>
-			<div id="sound">音</div>
+			<div id="color" class="insidemenu">色</div>
+			<div id="sound" class="insidemenu">音</div>
 			</div>
 		<script type="text/javascript" src="scr.js"></script> 
 		<!--<style type="text/css" src="style.css"></style>-->
