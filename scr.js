@@ -2,6 +2,10 @@ document.getElementById("count").textContent = localStorage.getItem("countsave")
 const button = document.getElementById("button");
 const yn = document.getElementById("yn");
 
+
+
+
+
 var yokosukaSE = new Audio("sounds/yokosuka.mp3");
 var automode = false;
 var autorefresh;
@@ -101,3 +105,7 @@ button.onmousedown = function() {
 //document.querySelector('#find-me').addEventListener('click', geoFindMe);
 
 
+var soundFile = document.getElementById('inputfiles');
+soundFile.addEventListener("change", function(event) {
+        yokosukaSE = event.target.file
+},false);
