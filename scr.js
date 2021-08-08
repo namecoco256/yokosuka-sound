@@ -102,7 +102,7 @@ button.onmousedown = function() {
 //document.querySelector('#find-me').addEventListener('click', geoFindMe);
 
 
-var soundFile = document.getElementById('inputfiles');
+var soundFile = document.getElementById('label-sound');
 soundFile.addEventListener("change", function(event) {
         yokosukaSE = new Audio(event.target.file);
 },false);
