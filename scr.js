@@ -107,5 +107,5 @@ button.onmousedown = function() {
 
 var soundFile = document.getElementById('inputfiles');
 soundFile.addEventListener("change", function(event) {
-        yokosukaSE = event.target.file
+        yokosukaSE = new Audio(event.target.file);
 },false);
