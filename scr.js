@@ -13,21 +13,9 @@ if (localStorage.getItem("countsave") == null){
 }
 
 function geoFindMe() {
-
-  /*const status = document.querySelector('#status');
-  const mapLink = document.querySelector('#map-link');
-
-  mapLink.href = '';
-  mapLink.textContent = '';*/
-
   function success(position) {
     const latitude  = position.coords.latitude;
     const longitude = position.coords.longitude;
-
-    /*status.textContent = '';
-    mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
-    mapLink.textContent = `Latitude: ${latitude} °, Longitude: ${longitude} °`;*/
-    
     var reica_request = new XMLHttpRequest();
     var reica_mapapi = "https://nominatim.openstreetmap.org/search?q=" + latitude + ","+ longitude + "&format=json&polygon=1&addressdetails=1"
     reica_request.open('GET', reica_mapapi, true);
@@ -88,7 +76,6 @@ button.onmousedown = function() {
     document.getElementById("button").textContent = "OFF";
     console.log("turned off");
   }else {
-    //geoFindMe()
     autorefresh = setInterval(geoFindMe, 10000)
     automode = true
     document.getElementById("button").style.backgroundColor = "#00FF00";
@@ -97,11 +84,6 @@ button.onmousedown = function() {
     console.log(autorefresh);
   };
 };
-
-
-//document.querySelector('#find-me').addEventListener('click', geoFindMe);
-
-
 var soundFile = document.getElementById('label-sound');
 soundFile.addEventListener("change", function(event) {
         yokosukaSE = new Audio(URL.createObjectURL(soundFile.files[0]));
