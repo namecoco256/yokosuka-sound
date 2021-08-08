@@ -3,9 +3,6 @@ const button = document.getElementById("button");
 const yn = document.getElementById("yn");
 
 
-
-
-
 var yokosukaSE = new Audio("sounds/yokosuka.mp3");
 var automode = false;
 var autorefresh;
