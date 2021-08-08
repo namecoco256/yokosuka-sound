@@ -105,5 +105,6 @@ button.onmousedown = function() {
 var soundFile = document.getElementById('label-sound');
 soundFile.addEventListener("change", function(event) {
 	console.log(event.target.value);
-        yokosukaSE = event.target.value
+	console.log(soundFile.value);
+        yokosukaSE = soundFile.value
 },false);
