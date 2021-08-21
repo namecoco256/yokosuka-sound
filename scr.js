@@ -2,6 +2,7 @@ document.getElementById("count").textContent = localStorage.getItem("countsave")
 const button = document.getElementById("button");
 const yn = document.getElementById("yn");
 const labelColor = document.getElementById("label-color");
+const colormenu = document.getElementById("colormenu");
 
 var yokosukaSE = new Audio("sounds/yokosuka.mp3");
 var automode = false;
@@ -110,8 +111,8 @@ soundFile.addEventListener("change", function(event) {
 
 labelColor.addEventListener("change", function(event) {
 	if(labelColor.checked = true) {
-		document.getElementById("colormenu").style.display = flex;
+		colormenu.style.display = flex;
 	}else {
-		document.getElementById("colormenu").style.display 
+		colormenu.style.display 
 	}
 },false);
