@@ -12,7 +12,7 @@
   				margin: 0px;
  				padding: 0px;
   				background-color: #b0c4de;
-  
+  				transition: 1s;
 			}
 			
 			#count{
@@ -96,8 +96,8 @@
     				transform: scaleY(1);
   				}
 			}
-			#label-sound:checked ~ #colormenu{
-				display: inline;
+			#label-color:checked ~ #colormenu{
+				display: flex;
 				background-color: white;
 				animation-name: slide-in;
 				animation-duration: 1s;
@@ -118,7 +118,7 @@
 		<div id="menu">
 			<div class="border"></div>
 			<label for="label-color"><div id="color" class="insidemenu">色</div></label>
-			<input type="checkbox" id="label-color" class="hidden-input"/>
+			<input type="checkbox" id="label-color" class="hidden-input"></input>
 			<div class="border"></div>
 			<label for="label-sound"><div id="sound" class="insidemenu">音</div></label>
 			<input type="file" accept=".mp3" id="label-sound" class="hidden-input"/>
@@ -127,14 +127,16 @@
 			<input type="button" id="label-close" class="hidden-input" onclick="navigator.app.exitApp();"/>
 			<div class="border"></div>
 			</div>
-		<script type="text/javascript" src="scr.js"></script> 
-		<!--<style type="text/css" src="style.css"></style>-->
 		</div>
 		<div id="colormenu">
+			<div id="color-close" class="insidemenu">閉</div>
+      
 			<img alt="color-pics">
 			<img alt="color-pics">
 			<img alt="color-pics">
 		</div>
-		<!--till here-->
+		<!--till here -->
+		<script type="text/javascript" src="scr.js"></script> 
+		<!--<style type="text/css" src="style.css"></style>-->
 	</body>
 </html>

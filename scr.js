@@ -1,7 +1,8 @@
 
 const button = document.getElementById("button");
 const yn = document.getElementById("yn");
-
+const labelColor = document.getElementById("label-color");
+const colormenu = document.getElementById('colormenu');
 
 var yokosukaSE = new Audio("sounds/yokosuka.mp3");
 var automode = false;
@@ -50,6 +51,7 @@ function geoFindMe() {
         console.log("you are in yokosuka!");
         yn.textContent = "you are in yokosuka!";
         yn.style.backgroundColor = "#2D478B";
+	      
         if (!reica_continuing) {
 	  push.send()
           document.getElementById("count").textContent ++
