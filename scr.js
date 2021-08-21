@@ -51,7 +51,6 @@ function geoFindMe() {
         console.log("you are in yokosuka!");
         yn.textContent = "you are in yokosuka!";
         yn.style.backgroundColor = "#2D478B";
-	      
         if (!reica_continuing) {
           document.getElementById("count").textContent ++
           //push.send()
