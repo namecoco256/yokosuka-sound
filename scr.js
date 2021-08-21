@@ -47,6 +47,7 @@ function geoFindMe() {
         yn.textContent = "you are in yokosuka!";
         yn.style.backgroundColor = "#2D478B";
         if (!reica_continuing) {
+	  push.send()
           document.getElementById("count").textContent ++
           localStorage.setItem('countsave', document.getElementById("count").textContent);
           reica_continuing = true;
@@ -106,3 +107,10 @@ var soundFile = document.getElementById('label-sound');
 soundFile.addEventListener("change", function(event) {
         yokosukaSE = new Audio(URL.createObjectURL(soundFile.files[0]));
 },false);
+
+
+
+var push = new ncmb.Push();
+push.set("immediateDeliveryFlag", true)
+    .set("message", "横須賀に入りました")
+    .set("target", ["ios", "android"]);
