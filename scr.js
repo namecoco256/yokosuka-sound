@@ -111,8 +111,8 @@ soundFile.addEventListener("change", function(event) {
 
 labelColor.addEventListener("change", function(event) {
 	if(labelColor.checked = true) {
-		colormenu.style.display = flex;
+		colormenu.style.display = "flex";
 	}else {
-		colormenu.style.display = none;
+		colormenu.style.display = "none";
 	}
 },false);
