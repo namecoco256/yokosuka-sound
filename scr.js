@@ -120,7 +120,7 @@ function ondeleychange(event) {
   clearInterval(autorefresh);
   autorefresh = setInterval(geoFindMe, automodedeley)
 }
-document.geyElementById('deley-input').addEventListener('input', ondeleychange);
+document.getElementById('deley-input').addEventListener('input', ondeleychange);
 
 var push = new ncmb.Push();
 push.set("immediateDeliveryFlag", true)
