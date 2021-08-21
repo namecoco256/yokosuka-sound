@@ -113,6 +113,6 @@ labelColor.addEventListener("change", function(event) {
 	if(labelColor.checked = true) {
 		colormenu.style.display = flex;
 	}else {
-		colormenu.style.display 
+		colormenu.style.display = none;
 	}
 },false);
