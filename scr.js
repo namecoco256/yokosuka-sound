@@ -11,7 +11,7 @@ var autorefresh;
 if (localStorage.getItem("countsave") == null){
   localStorage.setItem('countsave', 0);
   localStorage.setItem('buttonsave', false);
-	localStorage.setItem('automodedeley', 10000);
+  localStorage.setItem('automodedeley', 10000);
 };
 document.getElementById("count").textContent = localStorage.getItem("countsave");
 var reica_continuing = localStorage.getItem('buttonsave');
@@ -118,7 +118,8 @@ function ondeleychange(event) {
   localStorage.setItem('automodedeley', event.target.value);
   automodedeley = event.target.value
   clearInterval(autorefresh);
-  autorefresh = setInterval(geoFindMe, automodedeley)
+  autorefresh = setInterval(geoFindMe, 10000)
+  //autorefresh = setInterval(geoFindMe, automodedeley)
 }
 document.getElementById('deley-input').addEventListener('input', ondeleychange);
 
