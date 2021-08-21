@@ -109,7 +109,7 @@ soundFile.addEventListener("change", function(event) {
         yokosukaSE = new Audio(URL.createObjectURL(soundFile.files[0]));
 },false);
 
-labelColor.addEventListener("change", function(event) {
+labelColor.addEventListener("change", function(event)) {
 	if(labelColor.checked = true) {
 		colormenu.style.display = flex;
 	}else {
