@@ -110,9 +110,8 @@ soundFile.addEventListener("change", function(event) {
 },false);
 
 labelColor.addEventListener("change", function(event) {
-	if(labelColor.checked = true) {
-		colormenu.style.display = "flex";
-	}else {
-		colormenu.style.display = "none";
-	}
+	colormenu.style.display = "flex";
 },false);
+document.getElementById("color-close").onMouseDown = function() {
+	colormenu.style.display = "none";
+}
