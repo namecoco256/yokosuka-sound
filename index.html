@@ -105,6 +105,17 @@
 			.hidden-input{
 				display: none;
 			}
+			#deleymenu{
+				position: absolute;
+				display: none;
+				width: 100%;
+				height: 50%;
+				position: absolute;
+				border-radius: 5px;
+				z-index: 2;
+				bottom: 0;
+				background-color: #ffffff;
+			}
 			.color-pics{
 				padding: 16px;
 				margin: 8px;
@@ -120,6 +131,9 @@
 			<label for="label-color"><div id="color" class="insidemenu">色</div></label>
 			<input type="checkbox" id="label-color" class="hidden-input"/>
 			<div class="border"></div>
+			<label for="label-deley"><div id="deley" class="insidemenu">間</div></label>
+			<input type="checkbox" id="label-deley" class="hidden-input"/>
+			<div class="border"></div>
 			<label for="label-sound"><div id="sound" class="insidemenu">音</div></label>
 			<input type="file" accept=".mp3" id="label-sound" class="hidden-input"/>
 			<div class="border"></div>
@@ -133,6 +147,7 @@
 		<div id="colormenu">
 			<div class="color-pics"></div>
 		</div>
+		<div id="deleymenu"><input id="deley-input" type="range" min="10000" max="3600000" step="10000"></div>
 		<!--till here-->
 	</body>
 </html>
