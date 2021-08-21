@@ -112,6 +112,6 @@ soundFile.addEventListener("change", function(event) {
 labelColor.addEventListener("change", function(event) {
 	colormenu.style.display = "flex";
 },false);
-document.getElementById("color-close").onMouseDown = function() {
+document.getElementById("color-close").onmousedown = function() {
 	colormenu.style.display = "none";
 }
