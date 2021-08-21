@@ -1,4 +1,4 @@
-
+console.log("294")
 const button = document.getElementById("button");
 const yn = document.getElementById("yn");
 const labelColor = document.getElementById("label-color");
@@ -51,7 +51,9 @@ function geoFindMe() {
         console.log("you are in yokosuka!");
         yn.textContent = "you are in yokosuka!";
         yn.style.backgroundColor = "#2D478B";
+        console.log(reica_continuing);
         if (!reica_continuing) {
+          console.log("alo");
           document.getElementById("count").textContent ++
           //push.send()
           localStorage.setItem('countsave', document.getElementById("count").textContent);
