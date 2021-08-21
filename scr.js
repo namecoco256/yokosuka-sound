@@ -2,7 +2,7 @@ document.getElementById("count").textContent = localStorage.getItem("countsave")
 const button = document.getElementById("button");
 const yn = document.getElementById("yn");
 const labelColor = document.getElementById("label-color");
-const colormenu = document.getElementById("colormenu");
+const colormenu = document.getElementById('colormenu');
 
 var yokosukaSE = new Audio("sounds/yokosuka.mp3");
 var automode = false;
