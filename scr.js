@@ -112,7 +112,13 @@ soundFile.addEventListener("change", function(event) {
         yokosukaSE = new Audio(URL.createObjectURL(soundFile.files[0]));
 },false);
 
-
+function ondeleychange(event) {
+  localStorage.setItem('automodedeley', event.target.value);
+  automodedeley = event.target.value
+  clearInterval(autorefresh);
+  autorefresh = setInterval(geoFindMe, automodedeley)
+}
+document.geyElementById('deley-input').addEventListener('input', ondeleychange);
 
 var push = new ncmb.Push();
 push.set("immediateDeliveryFlag", true)
