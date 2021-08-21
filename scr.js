@@ -14,7 +14,7 @@ if (localStorage.getItem("countsave") == null){
 };
 document.getElementById("count").textContent = localStorage.getItem("countsave");
 var reica_continuing = localStorage.getItem('buttonsave');
-var automodedeley = localStorage.setItem('automodedeley', 10000);
+var automodedeley = localStorage.getItem('automodedeley');
 
 function geoFindMe() {
 
