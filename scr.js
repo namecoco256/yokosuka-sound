@@ -1,4 +1,4 @@
-document.getElementById("count").textContent = localStorage.getItem("countsave");
+
 const button = document.getElementById("button");
 const yn = document.getElementById("yn");
 
@@ -6,11 +6,15 @@ const yn = document.getElementById("yn");
 var yokosukaSE = new Audio("sounds/yokosuka.mp3");
 var automode = false;
 var autorefresh;
-var reica_continuing = localStorage.getItem('buttonsave');
 
 if (localStorage.getItem("countsave") == null){
-  document.getElementById("count").textContent = 0
-}
+  localStorage.setItem('countsave', 0);
+  localStorage.setItem('buttonsave', false);
+	localStorage.setItem('automodedeley', 10000);
+};
+document.getElementById("count").textContent = localStorage.getItem("countsave");
+var reica_continuing = localStorage.getItem('buttonsave');
+var automodedeley = localStorage.setItem('automodedeley', 10000);
 
 function geoFindMe() {
 
@@ -52,7 +56,7 @@ function geoFindMe() {
           localStorage.setItem('countsave', document.getElementById("count").textContent);
           reica_continuing = true;
           localStorage.setItem('buttonsave', true);
-					currentTime = 0;
+	  currentTime = 0;
           yokosukaSE.muted = false;
           yokosukaSE.play();
           stop();
@@ -90,7 +94,7 @@ button.onmousedown = function() {
     console.log("turned off");
   }else {
     //geoFindMe()
-    autorefresh = setInterval(geoFindMe, 10000)
+    autorefresh = setInterval(geoFindMe, automodedeley)
     automode = true
     document.getElementById("button").style.backgroundColor = "#00FF00";
     document.getElementById("button").textContent = "ON";
