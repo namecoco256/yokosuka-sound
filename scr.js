@@ -1,7 +1,7 @@
 document.getElementById("count").textContent = localStorage.getItem("countsave");
 const button = document.getElementById("button");
 const yn = document.getElementById("yn");
-
+const labelColor = document.getElementById("label-color");
 
 var yokosukaSE = new Audio("sounds/yokosuka.mp3");
 var automode = false;
@@ -46,6 +46,8 @@ function geoFindMe() {
         console.log("you are in yokosuka!");
         yn.textContent = "you are in yokosuka!";
         yn.style.backgroundColor = "#2D478B";
+	console.log(labelColor.checked);
+	      
         if (!reica_continuing) {
           document.getElementById("count").textContent ++
           localStorage.setItem('countsave', document.getElementById("count").textContent);
