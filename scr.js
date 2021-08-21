@@ -122,8 +122,9 @@ function ondeleychange(event) {
   autorefresh = setInterval(geoFindMe, automodedeley)
 }
 document.getElementById('deley-input').addEventListener('input', ondeleychange);
-
+/*
 var push = new ncmb.Push();
 push.set("immediateDeliveryFlag", true)
     .set("message", "横須賀に入りました")
     .set("target", ["ios", "android"]);
+*/
