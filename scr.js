@@ -53,7 +53,7 @@ function geoFindMe() {
         yn.style.backgroundColor = "#2D478B";
 	      
         if (!reica_continuing) {
-	  push.send()
+	  //push.send()
           document.getElementById("count").textContent ++
           localStorage.setItem('countsave', document.getElementById("count").textContent);
           reica_continuing = true;
